@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "367355462223",
+    "project_id": "elrawee-881c2",
+    "storage_bucket": "elrawee-881c2.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:367355462223:android:e0c7acb68b1bef6e83a03a",
+        "android_client_info": {
+          "package_name": "com.example.elrawee"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCI1T8jY5NKrBrJQ7PGvAI9vq-IbtX47GE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
