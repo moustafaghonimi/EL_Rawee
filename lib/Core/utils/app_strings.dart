@@ -21,6 +21,26 @@ abstract class AppStrings {
       alreadyHaveAnAccount = "Already have an account ? ",
       dontHaveAnAccount = "Don’t have an account ? ",
       forgotPassword = "Forgot Password ?",
+      validPasswordEmpty = 'Please enter Password',
+      validPassword =
+          'Password must be at least 8 characters long,\ninclude an uppercase letter, a number,\n and a special character.\nexample: Mostafa123@',
+      validEmail =
+          'Please enter valid Email address \nexample: mostafaGhonimi@gmail.com',
+      validEmailEmpty = 'Please enter Email',
+      validFirstName = 'Please enter First Name',
+      validLastName = 'Please enter Last Name',
+
+      //!RGEX Strings
+      emailRegex =
+          r"^[a-zA-Z0-9.a-zA-Z0-9.!#$%&\'*+/=?^_`{|}~-]+@[a-zA-Z0-9]+\.[a-zA-Z]+",
+      passwordRegex =
+          r"^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$",
+
+      //!snack bar messages
+      signUpSuccess =
+          'Sign Up Success\nPlease check your email to verify your account',
+      termsAndConditionMessage = 'Please agree to the terms and conditions',
+
       //!Home Strings
       recommendations = "Recommendations",
       about = "About",

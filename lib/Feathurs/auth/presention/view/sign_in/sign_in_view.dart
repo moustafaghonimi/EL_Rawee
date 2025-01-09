@@ -1,3 +1,4 @@
+import 'package:elrawee/Core/routes/custem_navigation_router.dart';
 import 'package:flutter/material.dart';
 
 class SignIn extends StatelessWidget {
@@ -6,8 +7,16 @@ class SignIn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Text('Sign In'),
+      appBar: AppBar(
+        title: const Text('Sign In'),
+        actions: [
+          TextButton(
+            child: const Text('Sign Up'),
+            onPressed: () {
+              custemNavigationRouterReplacement(context, 'SignUpView');
+            },
+          )
+        ],
       ),
     );
   }

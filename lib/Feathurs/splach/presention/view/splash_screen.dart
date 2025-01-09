@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:elrawee/Core/database/cache/cache_helper.dart';
 import 'package:elrawee/Core/routes/custem_navigation_router.dart';
@@ -19,7 +20,9 @@ class _SplashScreenState extends State<SplashScreen> {
         ) ??
         false;
     if (isFirstTime == true) {
-      dalayedNavigator(context, 'SignUpView');
+      FirebaseAuth.instance.currentUser == null
+          ? dalayedNavigator(context, 'SignIn')
+          : dalayedNavigator(context, 'HomeView');
     } else {
       dalayedNavigator(context, 'onBording');
     }
