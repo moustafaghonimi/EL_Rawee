@@ -34,4 +34,7 @@ class Assets {
   /// assets/images/splach_logo.jpeg
   static const String assetsImagesSplachLogo = "assets/images/splach_logo.jpeg";
   static const String signUpImage = "assets/images/sign_up_image.png";
+  static const String loginImage = "assets/images/login.png";
+  static const String googleIcon = "assets/images/google.png";
+  static const String facebookIcon = "assets/images/facebook.png";
 }

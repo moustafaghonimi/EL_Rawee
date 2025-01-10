@@ -1,4 +1,4 @@
-import 'package:elrawee/Feathurs/auth/presention/widget/sign_up_form_filed.dart';
+import 'package:elrawee/Feathurs/auth/presention/widget/Sign_up_widget/sign_up_form_filed.dart';
 import 'package:flutter/material.dart';
 import 'package:elrawee/Core/utils/app_color.dart';
 

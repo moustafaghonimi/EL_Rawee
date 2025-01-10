@@ -11,6 +11,7 @@ class AuthCubit extends Cubit<AuthState> {
   String? firstName;
   String? lastName;
   GlobalKey<FormState> signUpFormKey = GlobalKey<FormState>();
+  GlobalKey<FormState> signInFormKey = GlobalKey<FormState>();
   bool checkBoxtermsAndConditionsValue = false;
   final emailRegex = RegExp(AppStrings.emailRegex);
   final passwordRegex = RegExp(AppStrings.passwordRegex);

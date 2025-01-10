@@ -11,7 +11,7 @@ import 'package:elrawee/Core/utils/app_color.dart';
 import 'package:elrawee/Core/utils/app_strings.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import '../../../../Core/widgets/custem_circule_indicator.dart';
+import '../../../../../Core/widgets/custem_circule_indicator.dart';
 
 class SignUpFormFiled extends StatelessWidget {
   const SignUpFormFiled({super.key});

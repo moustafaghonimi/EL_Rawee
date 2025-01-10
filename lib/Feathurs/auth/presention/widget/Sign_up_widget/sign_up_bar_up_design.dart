@@ -1,27 +1,24 @@
 import 'package:flutter/material.dart';
 import 'package:elrawee/Core/utils/Text_them.dart';
 import 'package:elrawee/Core/utils/app_assets.dart';
-import 'package:elrawee/Core/utils/app_color.dart';
 import 'package:elrawee/Core/utils/app_strings.dart';
-import 'package:elrawee/Feathurs/auth/presention/widget/external_continer.dart';
-import 'custm_image.dart';
+import 'package:typewritertext/typewritertext.dart';
+import '../custm_image.dart';
 
 class SignUPBarUp extends StatelessWidget {
   const SignUPBarUp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
+    return Column(
       children: [
-        ExternalContiner(),
-        Center(
-          child: Text(
+        SizedBox(
+          width: MediaQuery.of(context).size.width,
+          child: TypeWriter.text(
+            alignment: Alignment.center,
             AppStrings.signUp,
-            style: AppTextTheme.textStyleblack14.copyWith(
-              fontSize: 30,
-              fontWeight: FontWeight.bold,
-              color: AppColor.backgroundColor,
-            ),
+            style: AppTextTheme.textStyleYellowBold20.copyWith(fontSize: 30),
+            duration: const Duration(milliseconds: 120),
           ),
         ),
         CustmImage(image: Assets.signUpImage),

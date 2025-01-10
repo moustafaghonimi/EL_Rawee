@@ -7,6 +7,11 @@ abstract class AppTextTheme {
     fontSize: 25,
     fontWeight: FontWeight.bold,
   );
+  static const TextStyle textStyleYellowSemiBold18 = TextStyle(
+    color: AppColor.primaryColor,
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
+  );
   static const TextStyle onBordingBodySubTitelTextStyle14 = TextStyle(
     color: Color.fromARGB(183, 255, 255, 255),
     fontSize: 14,
@@ -26,5 +31,20 @@ abstract class AppTextTheme {
     color: AppColor.backgroundColor,
     fontSize: 18,
     fontWeight: FontWeight.normal,
+  );
+  static const TextStyle textStyleYellowBold20 = TextStyle(
+    fontSize: 20,
+    fontWeight: FontWeight.bold,
+    color: AppColor.primaryColor,
+  );
+  static const TextStyle textStyleWhite18 = TextStyle(
+    fontSize: 18,
+    fontWeight: FontWeight.w400,
+    color: AppColor.formColor,
+  );
+  static const TextStyle textStyleWhiteBold30 = TextStyle(
+    fontSize: 30,
+    fontWeight: FontWeight.bold,
+    color: AppColor.appBarTextColor,
   );
 }

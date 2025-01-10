@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:elrawee/Core/utils/app_color.dart';
 
 class ExternalContiner extends StatelessWidget {
-  const ExternalContiner({super.key});
-
+  const ExternalContiner({super.key, required this.height});
+  final double height;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +20,7 @@ class ExternalContiner extends StatelessWidget {
         color: AppColor.formColor,
       ),
       width: double.infinity,
-      height: MediaQuery.of(context).size.height * 0.12,
+      height: height,
     );
   }
 }

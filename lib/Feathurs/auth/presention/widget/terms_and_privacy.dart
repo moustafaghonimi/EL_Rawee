@@ -27,6 +27,7 @@ class TextAndButton extends StatelessWidget {
       TextButton(
           onPressed: onPressed,
           child: Text(
+            maxLines: 2,
             text2,
             style: TextStyle(
               decoration: TextDecoration.underline,
