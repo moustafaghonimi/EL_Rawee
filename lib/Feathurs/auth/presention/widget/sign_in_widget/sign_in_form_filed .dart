@@ -7,6 +7,7 @@ import 'package:elrawee/Feathurs/auth/data/auth_cubit/cubit/cubit/auth_cubit.dar
 import 'package:elrawee/Feathurs/auth/data/auth_cubit/cubit/cubit/auth_state.dart';
 import 'package:elrawee/Feathurs/auth/presention/widget/custem_text_form_filed.dart';
 import 'package:elrawee/Feathurs/auth/presention/widget/sign_in_widget/forget_pass_txt.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:elrawee/Core/utils/app_strings.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -25,8 +26,9 @@ class SigninFormFiled extends StatelessWidget {
         }
 
         if (state is SigninScuccessState) {
-          custemToast('Welcome Back to Rawee 😉');
-          custemNavigationRouterReplacement(context, 'HomeView');
+          FirebaseAuth.instance.currentUser!.emailVerified
+              ? custemNavigationRouterReplacement(context, 'HomeView')
+              : custemToast(AppStrings.verifieEmailMSG);
         }
       },
       builder: (context, state) {
@@ -73,9 +75,9 @@ class SigninFormFiled extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 55),
                 child: state is SigninLoadingState
-                    ? CustomCircularProgressIndicator(
+                    ? AnimatedCircularProgressIndicator(
                         progress: 0.8,
-                        textSize: 45,
+                        // textSize: 45,
                         w: 60,
                         h: 60,
                       )

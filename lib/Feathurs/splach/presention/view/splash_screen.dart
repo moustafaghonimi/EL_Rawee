@@ -22,7 +22,9 @@ class _SplashScreenState extends State<SplashScreen> {
     if (isFirstTime == true) {
       FirebaseAuth.instance.currentUser == null
           ? dalayedNavigator(context, 'SignIn')
-          : dalayedNavigator(context, 'HomeView');
+          : FirebaseAuth.instance.currentUser!.emailVerified
+              ? dalayedNavigator(context, 'HomeView')
+              : dalayedNavigator(context, 'SignIn');
     } else {
       dalayedNavigator(context, 'onBording');
     }

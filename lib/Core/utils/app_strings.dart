@@ -39,6 +39,7 @@ abstract class AppStrings {
       //!snack bar messages
       signUpSuccess =
           'Sign Up Success✔\nPlease check your email to verify your account🤳',
+      verifieEmailMSG = 'Please check your email to verify your account🤳',
       termsAndConditionMessage = 'Please agree to the terms and conditions 😏',
 
       //!Home Strings

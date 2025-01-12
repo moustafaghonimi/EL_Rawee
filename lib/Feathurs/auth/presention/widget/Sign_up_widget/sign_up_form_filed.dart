@@ -6,6 +6,7 @@ import 'package:elrawee/Feathurs/auth/data/auth_cubit/cubit/cubit/auth_state.dar
 import 'package:elrawee/Feathurs/auth/presention/widget/custem_check_box.dart';
 import 'package:elrawee/Feathurs/auth/presention/widget/custem_text_form_filed.dart';
 import 'package:elrawee/Feathurs/auth/presention/widget/terms_and_privacy.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:elrawee/Core/utils/app_color.dart';
 import 'package:elrawee/Core/utils/app_strings.dart';
@@ -26,7 +27,7 @@ class SignUpFormFiled extends StatelessWidget {
 
         if (state is SignUpScuccessState) {
           custemToast(AppStrings.signUpSuccess);
-          custemNavigationRouterReplacement(context, 'HomeView');
+          custemNavigationRouterReplacement(context, 'SignIn');
         }
       },
       builder: (context, state) {
@@ -107,9 +108,9 @@ class SignUpFormFiled extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 55),
                 child: state is SignUpLoadingState
-                    ? CustomCircularProgressIndicator(
+                    ? AnimatedCircularProgressIndicator(
                         progress: 0.7,
-                        textSize: 40,
+                        // textSize: 40,
                         w: 50,
                         h: 50,
                       )
