@@ -1,3 +1,4 @@
+import 'package:elrawee/Feathurs/auth/presention/view/reset_pass/reset_pass.dart';
 import 'package:elrawee/Feathurs/home/presention/view/home_view.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
@@ -30,6 +31,13 @@ final GoRouter router = GoRouter(routes: <RouteBase>[
     builder: (context, state) => BlocProvider(
       create: (context) => AuthCubit(),
       child: const SignUpView(),
+    ),
+  ),
+  GoRoute(
+    path: '/ResetPasswordView',
+    builder: (context, state) => BlocProvider(
+      create: (context) => AuthCubit(),
+      child: const ResetPasswordView(),
     ),
   ),
   GoRoute(

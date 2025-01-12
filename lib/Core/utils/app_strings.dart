@@ -84,6 +84,9 @@ abstract class AppStrings {
       //!Forgot password
       forgotPasswordPage = "Forgot Password",
       sendResetPasswordLink = "Send Reset Passwrod Link",
+      forgotPasswordCaption =
+          "Forgot your password? Don't worry, we've got you covered.",
+      resetPassMSG = "Please Check Your Mail to Reset Password 👌🔑",
       verificationNow = "Verification Now",
       resendCode = "Resend Code",
       verifyAccount = "Verify Account",

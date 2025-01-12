@@ -24,3 +24,13 @@ final class SigninMessageState extends AuthState {
   final String errorMessage;
   SigninMessageState(this.errorMessage);
 }
+
+// ====== reset pass  ===========
+final class ResetPassLoadingState extends AuthState {}
+
+final class ResetPassScuccessState extends AuthState {}
+
+final class ResetPassMessageState extends AuthState {
+  final String errorMessage;
+  ResetPassMessageState(this.errorMessage);
+}

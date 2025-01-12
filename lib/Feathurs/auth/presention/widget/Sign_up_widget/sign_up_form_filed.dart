@@ -6,7 +6,6 @@ import 'package:elrawee/Feathurs/auth/data/auth_cubit/cubit/cubit/auth_state.dar
 import 'package:elrawee/Feathurs/auth/presention/widget/custem_check_box.dart';
 import 'package:elrawee/Feathurs/auth/presention/widget/custem_text_form_filed.dart';
 import 'package:elrawee/Feathurs/auth/presention/widget/terms_and_privacy.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:elrawee/Core/utils/app_color.dart';
 import 'package:elrawee/Core/utils/app_strings.dart';

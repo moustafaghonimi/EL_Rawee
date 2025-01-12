@@ -6,7 +6,7 @@ import 'package:elrawee/Core/widgets/custme_btn.dart';
 import 'package:elrawee/Feathurs/auth/data/auth_cubit/cubit/cubit/auth_cubit.dart';
 import 'package:elrawee/Feathurs/auth/data/auth_cubit/cubit/cubit/auth_state.dart';
 import 'package:elrawee/Feathurs/auth/presention/widget/custem_text_form_filed.dart';
-import 'package:elrawee/Feathurs/auth/presention/widget/sign_in_widget/forget_pass_txt.dart';
+import 'package:elrawee/Feathurs/auth/presention/widget/sign_in_widget/reset_pass_txt.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:elrawee/Core/utils/app_strings.dart';
@@ -58,9 +58,10 @@ class SigninFormFiled extends StatelessWidget {
                   validator: (value) {
                     if (value!.isEmpty) {
                       return AppStrings.validPasswordEmpty;
-                    } else if (!authCubit.passwordRegex.hasMatch(value)) {
-                      return AppStrings.validPassword;
                     }
+                    //  else if (!authCubit.passwordRegex.hasMatch(value)) {
+                    //   return AppStrings.validPassword;
+                    // }
                     return null;
                   },
                   hintText: 'Password',
