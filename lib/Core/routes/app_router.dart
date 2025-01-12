@@ -7,6 +7,7 @@ import 'package:elrawee/Feathurs/onBording/presentaion/view/on_bording_screen.da
 import 'package:elrawee/Feathurs/splach/presention/view/splash_screen.dart';
 
 import '../../Feathurs/auth/presention/view/sign_in/sign_in_view.dart';
+import '../../Feathurs/auth/presention/widget/Sign_up_widget/termes_and_condition_screen.dart';
 
 final GoRouter router = GoRouter(routes: <RouteBase>[
   GoRoute(
@@ -34,5 +35,9 @@ final GoRouter router = GoRouter(routes: <RouteBase>[
   GoRoute(
     path: '/HomeView',
     builder: (context, state) => HomeView(),
+  ),
+  GoRoute(
+    path: '/TermsScreen',
+    builder: (context, state) => TermsScreen(),
   ),
 ]);

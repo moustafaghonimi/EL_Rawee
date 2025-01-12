@@ -90,11 +90,14 @@ class SignUpFormFiled extends StatelessWidget {
               Row(
                 children: [
                   CustemCheckBox(),
-                  const TextAndButton(
+                  TextAndButton(
                     text1: AppStrings.iHaveAgreeToOur,
                     text2: AppStrings.termsAndCondition,
                     color1: AppColor.texetErrorColor,
                     color2: AppColor.appBarColor,
+                    onPressed: () {
+                      custemNavigationRouter(context, 'TermsScreen');
+                    },
                   ),
                 ],
               ),

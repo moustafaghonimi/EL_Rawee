@@ -32,7 +32,8 @@ class SignUpView extends StatelessWidget {
                     text2: AppStrings.signIn,
                     color1: AppColor.formColor,
                     color2: AppColor.appBarTextColor,
-                    onPressed: () => custemNavigationRouter(context, 'SignIn')),
+                    onPressed: () =>
+                        custemNavigationRouterReplacement(context, 'SignIn')),
               ),
             ),
           ],

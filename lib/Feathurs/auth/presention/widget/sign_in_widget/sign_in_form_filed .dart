@@ -1,7 +1,12 @@
+// ignore_for_file: file_names
+
+import 'package:elrawee/Core/routes/custem_navigation_router.dart';
+import 'package:elrawee/Core/widgets/custem_tost.dart';
 import 'package:elrawee/Core/widgets/custme_btn.dart';
 import 'package:elrawee/Feathurs/auth/data/auth_cubit/cubit/cubit/auth_cubit.dart';
 import 'package:elrawee/Feathurs/auth/data/auth_cubit/cubit/cubit/auth_state.dart';
 import 'package:elrawee/Feathurs/auth/presention/widget/custem_text_form_filed.dart';
+import 'package:elrawee/Feathurs/auth/presention/widget/sign_in_widget/forget_pass_txt.dart';
 import 'package:flutter/material.dart';
 import 'package:elrawee/Core/utils/app_strings.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -14,7 +19,16 @@ class SigninFormFiled extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<AuthCubit, AuthState>(
-      listener: (context, state) {},
+      listener: (context, state) {
+        if (state is SigninMessageState) {
+          custemToast(state.errorMessage);
+        }
+
+        if (state is SigninScuccessState) {
+          custemToast('Welcome Back to Rawee 😉');
+          custemNavigationRouterReplacement(context, 'HomeView');
+        }
+      },
       builder: (context, state) {
         AuthCubit authCubit = BlocProvider.of<AuthCubit>(context);
         return Form(
@@ -51,36 +65,27 @@ class SigninFormFiled extends StatelessWidget {
                   icon: Icons.lock),
               Container(
                 alignment: Alignment.topRight,
-                child: Text(
-                  AppStrings.forgotPassword,
-                ),
+                child: ForgotPasswordText(),
               ),
               SizedBox(
                 height: 10,
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 55),
-                child: state is SignUpLoadingState
+                child: state is SigninLoadingState
                     ? CustomCircularProgressIndicator(
-                        progress: 0.7,
-                        textSize: 40,
-                        w: 50,
-                        h: 50,
+                        progress: 0.8,
+                        textSize: 45,
+                        w: 60,
+                        h: 60,
                       )
                     : CustmeBtn(
                         btnName: AppStrings.signIn,
                         onPressed: () {
-                          // if (authCubit.checkBoxtermsAndConditionsValue ==
-                          //     true) {
-                          //   if (authCubit.signInFormKey.currentState!
-                          //       .validate()) {
-                          //     if (state is SignUpScuccessState) {
-                          //       authCubit.signInFormKey.currentState!.reset();
-                          //     }
-                          //   }
-                          // } else {
-                          //   custemToast(AppStrings.termsAndConditionMessage);
-                          // }
+                          if (authCubit.signInFormKey.currentState!
+                              .validate()) {
+                            authCubit.signInWithEmailAndPassword();
+                          }
                         }),
               ),
             ],

@@ -47,6 +47,7 @@ dependencies:
   fluttertoast: ^8.2.10
   typewritertext: ^3.0.9
   icons_launcher: ^3.0.0
+  adaptive_dialog: ^2.4.0
 
 dev_dependencies:
   flutter_test:

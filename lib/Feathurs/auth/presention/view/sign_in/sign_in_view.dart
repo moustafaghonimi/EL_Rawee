@@ -14,6 +14,10 @@ class SignIn extends StatelessWidget {
         slivers: [
           SliverToBoxAdapter(child: SignInTopBar()),
           SliverToBoxAdapter(child: SignInFormDesign()),
+          SliverToBoxAdapter(
+              child: SizedBox(
+            height: 15,
+          )),
           SliverToBoxAdapter(child: SignInBottomDesign()),
         ],
       ),

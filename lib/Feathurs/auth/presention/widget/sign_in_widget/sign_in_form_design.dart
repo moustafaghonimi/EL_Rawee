@@ -12,9 +12,9 @@ class SignInFormDesign extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
         clipBehavior: Clip.antiAlias,
-        height: MediaQuery.of(context).size.height * 0.4,
         margin: const EdgeInsets.symmetric(horizontal: 10),
-        padding: const EdgeInsets.all(15),
+        padding:
+            const EdgeInsets.only(top: 25, bottom: 15, left: 10, right: 10),
         decoration: BoxDecoration(
           boxShadow: [
             BoxShadow(

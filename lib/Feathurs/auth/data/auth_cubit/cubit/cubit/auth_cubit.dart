@@ -17,6 +17,7 @@ class AuthCubit extends Cubit<AuthState> {
   final passwordRegex = RegExp(AppStrings.passwordRegex);
   bool isPassword = false;
 
+// ====== sign up ===========
   signUpAutheWithEmailAndPassword() async {
     try {
       emit(SignUpLoadingState());
@@ -27,9 +28,10 @@ class AuthCubit extends Cubit<AuthState> {
       emit(SignUpScuccessState());
     } on FirebaseAuthException catch (e) {
       if (e.code == 'weak-password') {
-        emit(SignUpMessageState('The password provided is too weak.'));
+        emit(SignUpMessageState('The password provided is too weak.👀'));
       } else if (e.code == 'email-already-in-use') {
-        emit(SignUpMessageState('The account already exists for that email.'));
+        emit(
+            SignUpMessageState('The account already exists for that email.😁'));
       }
     } catch (e) {
       emit(SignUpMessageState(e.toString()));
@@ -39,5 +41,28 @@ class AuthCubit extends Cubit<AuthState> {
   void checkBoxTermsAndConditions(bool value) {
     checkBoxtermsAndConditionsValue = value;
     emit(CheckBoxTermsAndConditionsState());
+  }
+
+// ====== sign in ===========
+
+  signInWithEmailAndPassword() async {
+    try {
+      emit(SigninLoadingState());
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: emailAddress!,
+        password: password!,
+      );
+      emit(SigninScuccessState());
+    } on FirebaseAuthException catch (e) {
+      if (e.code == 'user-not-found') {
+        emit(SigninMessageState('No user found for that email , Create One.'));
+      } else if (e.code == 'wrong-password') {
+        emit(SigninMessageState('Wrong password provided for that user.'));
+      } else {
+        emit(SigninMessageState('Please Check Email And Password 🤷‍♀️🤦‍♂️'));
+      }
+    } catch (e) {
+      emit(SigninMessageState(e.toString()));
+    }
   }
 }
