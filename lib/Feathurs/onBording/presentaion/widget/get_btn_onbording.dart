@@ -52,7 +52,7 @@ class GetBtnOnBording extends StatelessWidget {
         onPressed: () {
           if (controller.page!.toInt() < onBordingData.length - 1) {
             controller.nextPage(
-              duration: const Duration(milliseconds: 300),
+              duration: const Duration(milliseconds: 200),
               curve: Curves.easeInCubic,
             );
           }

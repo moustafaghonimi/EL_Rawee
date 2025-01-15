@@ -10,5 +10,5 @@ abstract class AppColor {
   static const Color appBarColor = Color.fromARGB(255, 6, 0, 27);
   static const Color appBarTextColor = Color.fromARGB(255, 247, 242, 242);
   static const Color hoverColor = Color.fromARGB(255, 204, 199, 250);
-  static const Color signupColor = Color.fromARGB(255, 20, 24, 46);
+  static const Color navBarColor = Color.fromARGB(255, 20, 24, 46);
 }

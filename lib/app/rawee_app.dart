@@ -10,11 +10,14 @@ class RaweeApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp.router(
       theme: ThemeData(
+        iconTheme: IconThemeData(
+          color: AppColor.primaryColor,
+        ),
         scaffoldBackgroundColor: AppColor.backgroundColor,
       ),
       routerConfig: router,
       debugShowCheckedModeBanner: false,
-      title: 'elrawee',
+      title: 'ELRAWEE',
     );
   }
 }

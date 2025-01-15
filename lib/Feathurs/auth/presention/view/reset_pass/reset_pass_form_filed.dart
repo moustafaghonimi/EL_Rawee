@@ -63,7 +63,7 @@ class ResetPassFormFiled extends StatelessWidget {
               ),
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 55),
-                child: state is SigninLoadingState
+                child: state is ResetPassLoadingState
                     ? AnimatedCircularProgressIndicator(
                         progress: 0.8,
                         // textSize: 45,

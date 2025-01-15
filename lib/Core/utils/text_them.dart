@@ -42,6 +42,11 @@ abstract class AppTextTheme {
     fontWeight: FontWeight.w400,
     color: AppColor.formColor,
   );
+  static const TextStyle textStyleyellow24 = TextStyle(
+    fontSize: 24,
+    fontWeight: FontWeight.w400,
+    color: AppColor.primaryColor,
+  );
   static const TextStyle textStyleWhiteBold30 = TextStyle(
     fontSize: 30,
     fontWeight: FontWeight.bold,

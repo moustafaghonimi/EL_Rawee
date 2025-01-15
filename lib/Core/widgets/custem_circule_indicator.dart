@@ -40,7 +40,7 @@ class _AnimatedCircularProgressIndicatorState
 
     // Define the scale animation for the letter
     _scaleAnimation = Tween<double>(begin: 1.0, end: 1.5).animate(
-      CurvedAnimation(parent: _controller, curve: Curves.easeInOut),
+      CurvedAnimation(parent: _controller, curve: Curves.easeInCubic),
     );
   }
 

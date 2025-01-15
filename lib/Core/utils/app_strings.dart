@@ -43,6 +43,7 @@ abstract class AppStrings {
       termsAndConditionMessage = 'Please agree to the terms and conditions 😏',
 
       //!Home Strings
+      besetPalases = "Beset Palases ",
       recommendations = "Recommendations",
       about = "About",
       wars = "Wars",

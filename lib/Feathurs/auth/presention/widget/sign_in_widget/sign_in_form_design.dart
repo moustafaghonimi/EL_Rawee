@@ -35,7 +35,7 @@ class SignInFormDesign extends StatelessWidget {
               child: TextAndButton(
                   text1: AppStrings.dontHaveAnAccount,
                   text2: AppStrings.createAccount,
-                  color1: AppColor.signupColor,
+                  color1: AppColor.appBarColor,
                   color2: AppColor.textColor,
                   onPressed: () =>
                       custemNavigationRouter(context, 'SignUpView')),

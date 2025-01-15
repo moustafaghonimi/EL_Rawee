@@ -1,5 +1,5 @@
-import 'package:elrawee/Feathurs/auth/presention/view/reset_pass/reset_pass.dart';
-import 'package:elrawee/Feathurs/home/presention/view/home_view.dart';
+import 'package:elrawee/Feathurs/auth/presention/view/reset_pass/reset_pass_view.dart';
+import 'package:elrawee/Feathurs/home/presention/widget/home_nav_bar.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:elrawee/Feathurs/auth/presention/view/sign_up/sign_up_view.dart';
@@ -41,11 +41,11 @@ final GoRouter router = GoRouter(routes: <RouteBase>[
     ),
   ),
   GoRoute(
-    path: '/HomeView',
-    builder: (context, state) => HomeView(),
-  ),
-  GoRoute(
     path: '/TermsScreen',
     builder: (context, state) => TermsScreen(),
+  ),
+  GoRoute(
+    path: '/HomeNavBar',
+    builder: (context, state) => HomeNavBar(),
   ),
 ]);

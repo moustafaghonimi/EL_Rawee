@@ -27,7 +27,7 @@ class SigninFormFiled extends StatelessWidget {
 
         if (state is SigninScuccessState) {
           FirebaseAuth.instance.currentUser!.emailVerified
-              ? custemNavigationRouterReplacement(context, 'HomeView')
+              ? custemNavigationRouterReplacement(context, 'HomeNavBar')
               : custemToast(AppStrings.verifieEmailMSG);
         }
       },
